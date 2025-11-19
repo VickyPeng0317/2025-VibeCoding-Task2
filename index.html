@@ -64,9 +64,10 @@
       margin: 0 auto;
       padding: 0.75rem 1.25rem;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 0.5rem;
     }
 
     .nav-brand {
@@ -85,10 +86,12 @@
       list-style: none;
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.5rem;
       margin: 0;
       padding: 0;
       font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
     }
 
     .nav-link {
@@ -253,6 +256,8 @@
       font-size: 0.9rem;
       color: #d1d5db;
       margin: 0;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     .chip-row {
@@ -291,9 +296,11 @@
 
     .contact-link {
       display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
+      flex-wrap: wrap;
+      gap: 0.1rem 0.35rem;
       font-weight: 500;
+      word-break: break-all;
+      overflow-wrap: anywhere;
     }
 
     .contact-link span {
@@ -311,11 +318,19 @@
       background: rgba(15, 23, 42, 0.9);
       font-size: 0.83rem;
       color: #9ca3af;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     .section-note strong {
       color: #e5e7eb;
       font-weight: 600;
+    }
+
+    .section-note code {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      font-size: 0.78rem;
     }
 
     .hero-tagline {
@@ -364,6 +379,8 @@
       color: #9ca3af;
       margin-top: 0.35rem;
       text-align: right;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
     }
 
     .skills-grid {
@@ -454,6 +471,10 @@
     @media (min-width: 768px) {
       .nav {
         padding: 0.9rem 1.25rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
       }
 
       .nav-list {
@@ -547,7 +568,7 @@
             <div>
               <div class="badge">
                 <span class="badge-dot"></span>
-                Peng · 前端工程師網站骨架
+                個人品牌 · 前端工程師網站骨架
               </div>
               <p class="hero-tagline">這裡是個人網站的主視覺 Hero 區占位內容。</p>
               <h1 id="hero-heading" class="hero-headline">
